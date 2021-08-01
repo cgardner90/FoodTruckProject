@@ -8,10 +8,10 @@ public class FoodTruck {
 	String type;
 	int rating;
 	final int FoodTruckId;
+	public static int n=1;
 	
 	{ 
 	// set ID here using Math.random()?
-		int n = 1;
 		FoodTruckId = n;
 		n++;
 	}
@@ -29,7 +29,7 @@ public class FoodTruck {
 		super();
 	}
 	public void displayTruck() {
-		System.out.println("Name: "+ this.name+" \nType: "+ this.type + "\nRating: "+ rating);
+		System.out.println("\n*   Name: "+ this.name+" \n*  Type: "+ this.type + "\n*  Rating: "+ rating+"\n*  FoodTruckID:" + this.FoodTruckId);
 	}
 	public String getName() {
 		return name;
@@ -51,6 +51,11 @@ public class FoodTruck {
 	}
 	public int getFoodTruckId() {
 		return FoodTruckId;
+	}
+	@Override
+	public String toString() {
+		return "FoodTruck [Name = " + name + ", Type = " + type + ", Rating = " + rating + ", FoodTruckId = " + FoodTruckId
+				+ "]";
 	}
 	
 		
