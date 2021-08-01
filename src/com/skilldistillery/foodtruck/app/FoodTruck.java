@@ -29,7 +29,7 @@ public class FoodTruck {
 		super();
 	}
 	public void displayTruck() {
-		System.out.println("\n*   Name: "+ this.name+" \n*  Type: "+ this.type + "\n*  Rating: "+ rating+"\n*  FoodTruckID:" + this.FoodTruckId);
+		System.out.println("\n*  Name: "+ this.name+" \n    Type: "+ this.type + "\n    Rating: "+ rating+"\n    FoodTruckID:" + this.FoodTruckId);
 	}
 	public String getName() {
 		return name;

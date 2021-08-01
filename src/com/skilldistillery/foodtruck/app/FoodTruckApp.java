@@ -26,35 +26,35 @@ public class FoodTruckApp {
 	public void greeting() {
 		System.out.println("\t*** Welcome to the Food Truck App! ***\n");
 		System.out.println(
-				"  * This app allows you to enter up to 5 of your favorite\n   food trucks, along with descriptions and ratings!");
+				"- This app allows you to enter up to 5 of your favorite\n   food trucks, along with descriptions and ratings!");
 		System.out.println(
-				"\n  * Once you build up a library of trucks, you'll be sent \n  to our App Menu to allow you to view your data.");
-		System.out.print("\n\n**  First things first, you need to enter some trucks! Let's get started:");
+				"\n- Once you build up a library of trucks, you'll be sent \n  to our App Menu to allow you to view your data.");
+		System.out.print("\n\n *** First things first, you need to enter some trucks! Let's get started:");
 	}
 
 	public void addTruck() {
 		boolean allowed;
 		boolean moveOn;
-		System.out.print("-- Please enter up to five (5) Food Trucks. Less than 5 is no problem.\n\n");
-		System.out.print("-- Once you've added as many trucks as you'd like,\n simply type \"QUIT\" in the \"Enter a Name\" field \n and you'll be able to access the rest of the App.\n\n");
+		System.out.print("   Please enter up to five (5) Food Trucks. Less than 5 is no problem.\n\n");
+		System.out.print("   Once you've added as many trucks as you'd like,\n simply type \"QUIT\" in the \"Enter a Name\" field \n and you'll be able to access the rest of the App.\n\n");
 		do {
 			Scanner input = new Scanner(System.in);
 
-			System.out.println("* Enter the name of a Food Truck");
+			System.out.println("  * Enter the name of a Food Truck");
 			String name = input.nextLine();
 			if (name.equalsIgnoreCase("quit")) {
 				break;
 			}
 
-			System.out.println("* Enter the Type (example: \"Mexican\" or \"Burgers\"");
+			System.out.println("  * Enter the Type (example: \"Mexican\" or \"Burgers\"");
 			String type = input.next();
 			System.out.println("\n");
-			System.out.println("*  Finally, enter a rating from 1-5");
+			System.out.println("  * Finally, enter a rating from 1-5");
 			int rating = input.nextInt();
 			allowed = (rating >= 1 && rating <= 5);
 			if (!allowed) {
 				do {
-					System.out.print("\tSorry, rating must be 1-5.\n");
+					System.out.print("   Sorry, rating must be 1-5.\n");
 					System.out.print(" * Enter a rating from 1-5");
 					rating = input.nextInt();
 					allowed = (rating >= 1 && rating <= 5);
@@ -75,21 +75,20 @@ public class FoodTruckApp {
 		if(avail == 0 ) {
 			menu();
 		}
-		System.out.println("Enter a Food Truck: ");
+		System.out.println(" * Enter a Food Truck: (note: \"quit\" will exit to menu)");
 		String name = input.nextLine();
 		if (name.equalsIgnoreCase("quit")) {
 			menu();
 		}
 		
-		System.out.println("* Enter the Type (example: \"Mexican\" or \"Burgers\"");
+		System.out.println(" * Enter the Type (example: \"Mexican\" or \"Burgers\"");
 		String type = input.next();
-		System.out.println("\n");
-		System.out.println("*  Finally, enter a rating from 1-5");
+		System.out.println(" * Finally, enter a rating from 1-5");
 		int rating = input.nextInt();
 		allowed = (rating >= 1 && rating <= 5);
 		if (!allowed) {
 			do {
-				System.out.print("\tSorry, rating must be 1-5.\n");
+				System.out.print("   Sorry, rating must be 1-5.\n");
 				System.out.print(" * Enter a rating from 1-5");
 				rating = input.nextInt();
 				allowed = (rating >= 1 && rating <= 5);
@@ -108,9 +107,9 @@ public class FoodTruckApp {
 		Scanner input = new Scanner(System.in);
 		int response;
 		do {
-			System.out.println("\nPlease select what you would like to do:");
+			System.out.println("\n  Please select what you would like to do:");
 			System.out.println(
-					"\n\t1. List all Existing trucks.\n\t2. See Average Truck Rating.\n\t3.Display Highest Rated Truck.\n\t4. Add another truck. \n\t5. Quit the App.");
+					"\n\t1. List all existing trucks.\n\t2. See average truck rating.\n\t3. Display highest rated truck.\n\t4. Add another truck. \n\t5. Quit the App.");
 			response = input.nextInt();
 
 			switch (response) {
@@ -118,10 +117,10 @@ public class FoodTruckApp {
 				showTrucks();
 				break;
 			case 2:
-				System.out.println("* The average rating of your trucks is " + avgRating());
+				System.out.println("\nThe average rating of your trucks is " + avgRating());
 				break;
 			case 3:
-				System.out.print("The highest rated Food Truck is: \n");
+				System.out.print("\nThe highest rated food truck is: \n");
 				highRate();
 				break;
 			case 4:
